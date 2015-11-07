@@ -1,6 +1,11 @@
 # react-i
 
-[![Circle CI](https://circleci.com/gh/leecade/react-i.svg)](https://circleci.com/gh/leecade/react-i) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![npm version](http://img.shields.io/npm/v/react-i.svg?style=flat-square)](https://npmjs.org/package/react-i "View this project on npm")
+[![npm version](http://img.shields.io/npm/dm/react-i.svg?style=flat-square)](https://npmjs.org/package/react-i "View this project on npm")
+[![Issue Stats](http://issuestats.com/github/leecade/react-i/badge/pr?style=flat-square)](https://github.com/leecade/react-i/pulls?q=is%3Apr+is%3Aclosed)
+[![Issue Stats](http://issuestats.com/github/leecade/react-i/badge/issue?style=flat-square)](https://github.com/leecade/react-i/issues?q=is%3Aissue+is%3Aclosed)
+[![Circle CI](https://circleci.com/gh/leecade/react-i.svg)](https://circleci.com/gh/leecade/react-i)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 A tiny (1 KB gzipped) `<Icon />` Component for React(-like).
 
