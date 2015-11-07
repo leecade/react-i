@@ -1,0 +1,56 @@
+{
+  "name": "react-i",
+  "version": "0.1.0",
+  "keywords": [
+    "react",
+    "react-component",
+    "icon",
+    "glyph"
+  ],
+  "author": "leecade <leecade@163.com>",
+  "description": "A simple way to use icon element in your react-like project",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel -d lib src",
+    "dev": "webpack --config webpack.config.js",
+    "prepublish": "npm run build",
+    "test": "mocha --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leecade/react-i.git"
+  },
+  "peerDependencies": {
+    "react": ">=0.14.0",
+    "react-dom": ">=0.14.0"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.33",
+    "babel-loader": "^5.3.3",
+    "chai": "^3.4.0",
+    "eslint-plugin-react": "^3.7.1",
+    "mocha": "^2.3.3",
+    "webpack": "^1.12.3"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leecade/react-i/issues"
+  },
+  "homepage": "https://github.com/leecade/react-i#readme",
+  "dependencies": {
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "global": [
+      "alert",
+      "fetch",
+      "Headers"
+    ],
+    "ignore": [
+      "dist/",
+      "node_modules/"
+    ]
+  }
+}

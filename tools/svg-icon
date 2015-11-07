@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+
+var fs = require('fs')
+var cheerio = require('./cheerio')
+var path = require('path')
+var SVGO = require('./svgo')
+var svgo = new SVGO()
+
+var cheerioOptions = {xmlMode: true}
+var files = process.argv.slice(2)
+
+!files.length && console.log('Need to specify a file to clean')
+
+function read(file, cb) {
+  var content = fs.readFileSync(file, 'utf8')
+  svgo.optimize(content, function(result) {
+    cb(cheerio.load(result.data, cheerioOptions))
+  })
+}
+
+function convert($, name) {
+  var node = $('svg')
+  node.find('[fill=none]').remove()
+  node.find('path').removeAttr('fill')
+  node.find('path').removeAttr('fill-rule')
+  var innerHTML = $.xml(node.children())
+  var output = 'export const ' + name + ' = () => <g>' + innerHTML + '</g>'
+  console.log(output)
+}
+
+function path2IconName(file) {
+  var filename = path.basename(file).split('.')[0]
+  return filename.toLowerCase().replace(/(\b|-)\w/g, function(m) {
+    return m.toUpperCase().replace(/-/,'')
+  })
+}
+
+files.forEach(function(file) {
+  var name = path2IconName(file)
+  read(file, function ($) {
+    convert($, name)
+  })
+})

@@ -1,0 +1,11 @@
+image: node
+
+before_script:
+  - node -v
+  - npm -v
+  - pwd
+  
+job1:
+  stage: test
+  script:
+    - npm test
