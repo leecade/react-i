@@ -156,5 +156,10 @@ npm run dev
 ## Need more open-source iconset
 
 - [material-design-icons](https://elements.polymer-project.org/elements/iron-icons?view=demo:demo/index.html&active=iron-icons)
-
 - [Twig](https://github.com/leecade/twig/tree/master/svg/24)
+
+## Refs
+
+- [Tips for Creating and Exporting Better SVGs for the Web](http://sarasoueidan.com/blog/svg-tips-for-designers)
+- [SVG `symbol` a Good Choice for Icons](https://css-tricks.com/svg-symbol-good-choice-icons/)
+- [An Overview of SVG Sprite Creation Techniques](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/)
