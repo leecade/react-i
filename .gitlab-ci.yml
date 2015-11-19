@@ -6,6 +6,6 @@ before_script:
   - pwd
   
 job1:
-  stage: test
+  stage: build
   script:
     - npm test
