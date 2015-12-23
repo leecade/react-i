@@ -4,6 +4,7 @@ before_script:
   - node -v
   - npm -v
   - pwd
+  - npm i
   
 job1:
   stage: test
