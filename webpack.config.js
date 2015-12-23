@@ -1,7 +1,6 @@
 var webpack = require('webpack')
 
 module.exports = {
-  devtool: 'source-map',
   entry: ['./demo/index.js'],
   output: {
     path: './demo',

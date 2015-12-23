@@ -25,10 +25,12 @@ export default class I extends Component {
       PropTypes.number
     ]),
     style: PropTypes.object,
+    fill: PropTypes.string,
+    stroke: PropTypes.string,
     dir: PropTypes.oneOf([
       'left',
       'right'
-    ]),
+    ])
   }
 
   static defaultProps = {
@@ -37,6 +39,8 @@ export default class I extends Component {
 
   render () {
     const Icon = icons[this.props.icon] || this.props.icon || ''
+    if (this.props.fill) style.fill = this.props.fill
+    if (this.props.stroke) style.stroke = this.props.stroke
     return <span style={this.props.style}>
       {this.props.dir === 'right' ? this.props.children : ''}
       <svg

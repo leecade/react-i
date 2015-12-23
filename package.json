@@ -10,8 +10,12 @@
   "author": "leecade <leecade@163.com>",
   "description": "A simple way to use icon element in your react-like project",
   "main": "lib/index.js",
+  "files": [
+    "src",
+    "lib"
+  ],
   "scripts": {
-    "build": "babel -d lib src",
+    "build": "babel src -o lib/index.js",
     "dev": "webpack --config webpack.config.js",
     "prepublish": "npm run build",
     "test": "mocha --compilers js:babel-core/register"

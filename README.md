@@ -13,7 +13,7 @@ A tiny (1 KB gzipped) `<Icon />` Component for React(-like).
 
 [DEMO](https://view.gitlab.pro/react/react-i)
 
-![image](https://gitlab.pro/haoyayi/clinic-profile/uploads/cc18f1ac6a5407a6b2c872bee990b753/image.png)
+![image](https://gitlab.pro/react/react-i/uploads/6ea1589a3fbbe2d5942b9813f59b10f0/image.png)
 
 ### Compatibility
 
@@ -31,6 +31,7 @@ import I from 'react-i'
 
 <I icon='up' />
 <I icon='up'>icon</I>
+<I icon='up' fill='#f00'>icon</I>
 ```
 
 #### Props
@@ -46,10 +47,14 @@ static propTypes = {
     PropTypes.number
   ]),
   style: PropTypes.object,
+
+  // Use `fill` and `stroke` is a convenient way, auto merge to `style`
+  fill: PropTypes.string,
+  stroke: PropTypes.string,
   dir: PropTypes.oneOf([
     'left',
     'right'
-  ]),
+  ])
 }
 ```
 
@@ -138,6 +143,18 @@ Consider for reduce size in the real world, there provides a simple way to creat
 
   <button style={{background: '#38B8C1', color: '#fff', border: 'none', borderRadius: '2px', 'paddingLeft': '5px', 'outline': 'none'}}><I icon='up' dir='right'>use in button</I></button>
 </div>
+```
+
+Animation Svg example:
+
+> Notice that, React(v0.14.x) not support `animateTransform` yet, there is a temporary solution with `dangerouslySetInnerHTML`
+
+```jsx
+const Spinner = () => <g>
+  <path opacity=".25" d="M12,0 C5.372583,-4.05812251e-16 8.11624501e-16,5.372583 0,12 C-8.11624501e-16,18.627417 5.372583,24 12,24 C18.627417,24 24,18.627417 24,12 C24,5.372583 18.627417,4.05812251e-16 12,0 M12,3 C16.9705627,3.00000007 20.9999999,7.0294373 20.9999999,12 C20.9999999,16.9705627 16.9705627,20.9999999 12,21 C7.0294373,20.9999999 3.00000013,16.9705627 3.00000013,12 C3.00000013,7.0294373 7.0294373,3.00000007 12,3"/>
+  <path d="M12,0 C18.627417,4.05812251e-16 24,5.372583 24,12 L21,12 C21,7.02943725 16.9705627,3 12,3 L12,0 Z" dangerouslySetInnerHTML={{ __html: '<animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite" />' }}>
+  </path>
+</g>
 ```
 
 Try your self:
