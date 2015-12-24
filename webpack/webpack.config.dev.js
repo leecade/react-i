@@ -7,12 +7,6 @@ module.exports = {
     filename: 'js/bundle.js'
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    })
   ],
   module: {
     loaders: [{

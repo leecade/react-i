@@ -1,6 +1,6 @@
 {
   "name": "react-i",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "react",
     "react-component",
@@ -15,8 +15,8 @@
     "lib"
   ],
   "scripts": {
-    "build": "babel src -o lib/index.js",
-    "dev": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack/webpack.config.prod.js",
+    "dev": "webpack --config webpack/webpack.config.dev.js --watch",
     "prepublish": "npm run build",
     "test": "mocha --compilers js:babel-core/register"
   },
