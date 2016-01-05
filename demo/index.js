@@ -15,7 +15,7 @@ const Spinner = () => <g>
 export default class App extends Component {
   render () {
     return <div style={{color:'#38B8C1'}}>
-      <I icon='up'><span>icon-left</span></I><br/>
+      <I className='xxx' icon='up'><span>icon-left</span></I><br/>
       <I dir='right' icon='down'><span>icon-right</span></I><br/>
 
       <span style={{color: '#4B5E6E'}}><I icon='up'>Inherit Color</I></span><br/>

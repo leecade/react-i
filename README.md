@@ -31,7 +31,7 @@ import I from 'react-i'
 
 <I icon='up' />
 <I icon='up'>icon</I>
-<I icon='up' fill='#f00'>icon</I>
+<I icon='up' fill='#f00' className='i-up'>icon</I>
 ```
 
 #### Props

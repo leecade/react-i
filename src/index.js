@@ -10,11 +10,6 @@ const style = {
 }
 
 export default class I extends Component {
-
-  constructor (props) {
-    super(props)
-  }
-
   static propTypes = {
     icon: PropTypes.oneOfType([
       PropTypes.func,
@@ -41,16 +36,15 @@ export default class I extends Component {
     const Icon = icons[this.props.icon] || this.props.icon || ''
     if (this.props.fill) style.fill = this.props.fill
     if (this.props.stroke) style.stroke = this.props.stroke
-    return <span style={this.props.style}>
+    style.width = this.props.size
+    style.height = this.props.size
+    return <span {...this.props} style={this.props.style}>
       {this.props.dir === 'right' ? this.props.children : ''}
       <svg
         viewBox='0 0 24 24'
         preserveAspectRatio='xMidYMid meet'
         fit
-        style={Object.assign({}, style, {
-          width: this.props.size,
-          height: this.props.size
-        })}>
+        style={style}>
         <Icon />
       </svg>
       {this.props.dir === 'right' ? '' : this.props.children}
