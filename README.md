@@ -174,6 +174,7 @@ npm run dev
 
 - [material-design-icons](https://elements.polymer-project.org/elements/iron-icons?view=demo:demo/index.html&active=iron-icons)
 - [Twig](https://github.com/leecade/twig/tree/master/svg/24)
+- [polyicon](https://github.com/PolymerLabs/polyicon)
 
 ## Refs
 
