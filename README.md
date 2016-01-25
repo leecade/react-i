@@ -181,3 +181,4 @@ npm run dev
 - [Tips for Creating and Exporting Better SVGs for the Web](http://sarasoueidan.com/blog/svg-tips-for-designers)
 - [SVG `symbol` a Good Choice for Icons](https://css-tricks.com/svg-symbol-good-choice-icons/)
 - [An Overview of SVG Sprite Creation Techniques](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/)
+- [Optimising SVGs for Web Use](https://medium.com/larsenwork-andreas-larsen/optimising-svgs-for-web-use-part-1-67e8f2d4035)
