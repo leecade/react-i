@@ -95,7 +95,7 @@ Consider for reduce size in the real world, there provides a simple way to creat
     
     ```sh
     $ npm i react-i-cli -g
-    $ svg-icon origin.svg
+    $ react-i origin.svg
     ```
 
     ```js
